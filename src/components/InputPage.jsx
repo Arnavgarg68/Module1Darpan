@@ -13,7 +13,8 @@ Aadhar ID
 */}
 export default function InputPage() {
     return (
-        <div className='InputPage-main'>
+            <form>
+            <div className='InputPage-main'>
             <label htmlFor="studentName"  className='InputPage-Labels'>Student's name:</label>
             <input type="text" id='studentName' autoFocus className="InputPage-field" placeholder='Student name'/>
             <label htmlFor="fatherName" className='InputPage-Labels'>Father's name:</label>
@@ -27,13 +28,15 @@ export default function InputPage() {
             <label htmlFor="branch" className='InputPage-Labels'>Branch:</label>
             <input type="text" id='branch' className="InputPage-field" placeholder='Branch name'/>
             <label htmlFor="mobileNumber" className='InputPage-Labels'>Mobile number:</label>
-            <input type="text" id='mobileNumber' className="InputPage-field" placeholder='Mobile number'/>
+            <input type="tel" id='mobileNumber' className="InputPage-field" placeholder='Mobile number'/>
             <label htmlFor="emailId" className='InputPage-Labels'>Email Id:</label>
-            <input type="text" id='emailId' className="InputPage-field" placeholder='Email id'/>
+            <input type="email" id='emailId' className="InputPage-field" placeholder='Email id'/>
             <label htmlFor="address" className='InputPage-Labels'>Address:</label>
             <input type="text" id='address' className="InputPage-field" placeholder='Address'/>
             <label htmlFor="aadhar" className='InputPage-Labels'>Aadhar number:</label>
             <input type="text" id='aadhar' className="InputPage-field" placeholder='Aadhar number'/>
-        </div>
+            </div>
+            <button type='submit' className="submitButton">Submit</button>
+            </form>
     )
 }
