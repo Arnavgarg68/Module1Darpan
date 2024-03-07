@@ -3,8 +3,9 @@ body{
   padding: 0;
   box-sizing: border-box;
   background-image: url('./white-and-blue-tone-abstract-background-backdrop-for-presentation-design-for-website-concept-of-beauty-and-health-business-brochure-free-photo.jpg');
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
+  background-position: center;
 }
 .Header-main{
   background-color: orange;
@@ -43,6 +44,7 @@ body{
 }
 /* Input field css */
 form{
+  
   display: flex;
   flex-direction: column;
   justify-content: center;

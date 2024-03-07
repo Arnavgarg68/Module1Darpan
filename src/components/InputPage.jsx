@@ -35,6 +35,10 @@ export default function InputPage() {
             <input type="text" id='address' className="InputPage-field" placeholder='Address'/>
             <label htmlFor="aadhar" className='InputPage-Labels'>Aadhar number:</label>
             <input type="text" id='aadhar' className="InputPage-field" placeholder='Aadhar number'/>
+            <label htmlFor="marksheet" className='InputPage-Labels'>Marksheet copy pdf:</label>
+            <input type="file" id='marksheet' accept="application/pdf" className="InputPage-field" placeholder='Aadhar number'/>
+            <label htmlFor="aadharcopy" className='InputPage-Labels'>Aadhar copy pdf:</label>
+            <input type="file" id='aadharcopy' accept="application/pdf" className="InputPage-field" placeholder='Aadhar number'/>
             </div>
             <button type='submit' className="submitButton">Submit</button>
             </form>
