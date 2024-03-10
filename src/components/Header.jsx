@@ -7,7 +7,6 @@ export default function Header() {
     var currentdate = new Date();
     let currentsecounds = currentdate.getSeconds();
     let [currDate, setCurrDate] = useState(`${currentdate.getHours()<10?`0${currentdate.getHours()}`:currentdate.getHours()}:${currentdate.getMinutes() < 10 ? `0${currentdate.getMinutes()}` : currentdate.getMinutes()}:${currentdate.getSeconds() < 10 ? `0${currentdate.getSeconds()}` : currentdate.getSeconds()}`);
-    console.log(Date());
     setInterval(() => {
         currentdate = new Date()
         currentsecounds = currentdate.getSeconds();

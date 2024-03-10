@@ -38,8 +38,6 @@ body{
   .Header-main{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
   }
 }
 /* Input field css */
@@ -74,6 +72,18 @@ form{
   background-color: rgba(255, 255, 255, 0.352);
   padding: 10px;
   font-size: 20px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+  font-style: italic;
+}
+.InputPage-field:focus{
+  transform: scale(1.03);
+  box-shadow: 0px 0px 6px rgba(127, 127, 127, 0.768);
+  /* transform: scale(1.02); */
+}
+.InputPage-field::placeholder{
+  font-style: italic;
+  font-size: 15px;
 }
 .submitButton{
   width: 150px;
