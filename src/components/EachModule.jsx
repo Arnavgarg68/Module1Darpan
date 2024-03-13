@@ -12,7 +12,7 @@ export default function EachModule(props) {
   //   return () => observer.unobserve(domRef.current);
   // }, []);
   return (
-    <Link to={`/${props.content.toLowerCase()}`}>
+    <Link to={`/${props.content.toLowerCase()}`}style={{textDecoration:"none",color:"black"}}>
     <div className="modules-card" >
         <img src={image} alt="illustrative" />
         <div className="module-content" >{props.content}</div>
