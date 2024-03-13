@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useParams } from 'react-router-dom';
 
 {/* Students name
 Fathers name
@@ -11,7 +12,9 @@ Email id
 Address with pin code
 Aadhar ID
 */}
-export default function InputPage() {
+export default function InputPage(props) {
+    const {appointment} = useParams();
+    console.log(appointment);
     const [formdata,setFormdata] = useState({
         'studentName':'',
         'fatherName':'',
@@ -27,7 +30,7 @@ export default function InputPage() {
         'aadharcopy':'',
     });
     const handleChange=(e)=>{
-        console.log(e.target.value);
+        // console.log(e.target.value);
         const {name,value} = e.target;
         setFormdata({
             ...formdata,
@@ -44,7 +47,7 @@ export default function InputPage() {
     // }
     const handleupload=(e)=>{
         const file = e.target.files[0];
-        console.log(file)
+        // console.log(file)
         // if (file && file.size>(5000*1024)) {
         //     console.log("exceeds file size");
         //     return
@@ -65,7 +68,7 @@ export default function InputPage() {
     return (
             <>
             <form onSubmit={handleSubmit}>
-            <h1 style={{"borderBottom":"1px solid black","fontWeight":"lighter","fontStyle":"italic","padding":"10px"}} >Duplicate Marksheet Form</h1>
+            <h1 >{props.title}</h1>
             <div className='InputPage-main'>
             <label htmlFor="studentName"  className='InputPage-Labels' >Student's name:</label>
             <input type="text" id='studentName' autoFocus className="InputPage-field" value={formdata.studentName} placeholder='Student name'name="studentName" onChange={handleChange}/>
