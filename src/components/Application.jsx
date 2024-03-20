@@ -48,15 +48,28 @@ export default function Application() {
             {!loader && (
 
             <div className="show-statuses">
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                    </tr>
                 {
+                    
                     applications?.map((e) => (
-                        <div key={e.id} className="application-bunch">
-                            <div className="application-date application-text">13/05/2024</div>
-                            <div className="application-name application-text">{e.name}</div>
-                            <div className="application-status application-text">{`Status: Done`}</div>
-                        </div>
+                        // <div key={e.id} className="application-bunch">
+                        //     <div className="application-date application-text">13/05/2024</div>
+                        //     <div className="application-name application-text">{e.name}</div>
+                        //     <div className="application-status application-text">{`Status: Done`}</div>
+                        // </div>
+                        <tr key={e.id} className="">
+                            <td className="">13/05/2024</td>
+                            <td className="">{e.name}</td>
+                            <td className="">{`Status: Done`}</td>
+                        </tr>
                     ))
                 }
+                </table>
             </div>
             )}
         </>
