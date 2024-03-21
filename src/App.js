@@ -5,6 +5,7 @@ import InputPage from './components/InputPage';
 import ModuleCard from './components/ModuleCard';
 import Application from './components/Application';
 import FacultyLogin from './components/FacultyLogin';
+import StudentForm from './components/StudentForm';
 function App() {
   document.title="Darpan Portal";
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/transcript/:appointment" element={<InputPage title="transcript" />} />
         {/* faculty area */}
         <Route path='/faculty-login' Component={FacultyLogin}/>
+        <Route path='/student-approval' Component={StudentForm}/>
       </Routes>
     </Router>
   );
